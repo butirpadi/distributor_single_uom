@@ -1,0 +1,101 @@
+<odoo>
+    <data>
+        <record id="make_menu_invisible" model="res.groups">
+            <field name="name">Invisible Menu</field>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <!-- Menu Inventory -> Operations -->
+        <record model="ir.ui.menu" id="stock.menu_stock_warehouse_mgmt">
+            <field name="groups_id" eval="[(6,0,[ref('make_menu_invisible')])]"/>
+        </record>
+
+        <!-- Menu Inventory -> Master Data -> Reordering Rules -->
+        <record model="ir.ui.menu" id="stock.menu_reordering_rules_config">
+            <field name="groups_id" eval="[(6,0,[ref('make_menu_invisible')])]"/>
+        </record>
+        
+        <!-- Menu Inventory -> Configuration -->
+        <record model="ir.ui.menu" id="stock.menu_stock_config_settings">
+            <field name="groups_id" eval="[(6,0,[ref('make_menu_invisible')])]"/>
+        </record>
+        
+        <!-- Menu Purchase -> purchase -> Products -->
+        <record model="ir.ui.menu" id="purchase.menu_procurement_partner_contact_form">
+            <field name="groups_id" eval="[(6,0,[ref('make_menu_invisible')])]"/>
+        </record>
+        
+        <!-- Menu Purchase -> Control -->
+        <record model="ir.ui.menu" id="purchase.menu_purchase_control">
+            <field name="groups_id" eval="[(6,0,[ref('make_menu_invisible')])]"/>
+        </record>
+        
+        <!-- Menu Sale -> Invoicing -->
+        <record model="ir.ui.menu" id="sale.menu_sale_invoicing">
+            <field name="groups_id" eval="[(6,0,[ref('make_menu_invisible')])]"/>
+        </record>
+        
+        <!-- Menu Sale -> Catalog -->
+        <record model="ir.ui.menu" id="sale.product_menu_catalog">
+            <field name="groups_id" eval="[(6,0,[ref('make_menu_invisible')])]"/>
+        </record>
+        
+        <!-- Menu Sale -> Reporting -> Sales Channel -->
+        <record model="ir.ui.menu" id="sale.report_sales_team">
+            <field name="groups_id" eval="[(6,0,[ref('make_menu_invisible')])]"/>
+        </record>
+        
+        <!-- Menu Sale -> Reporting -> All Channel Sales Orders -->
+        <record model="ir.ui.menu" id="sale.report_all_channels_sales">
+            <field name="groups_id" eval="[(6,0,[ref('make_menu_invisible')])]"/>
+        </record>
+        
+        <!-- Menu Sale -> Configuration -->
+        <record model="ir.ui.menu" id="sale.menu_sale_config">
+            <field name="groups_id" eval="[(6,0,[ref('make_menu_invisible')])]"/>
+        </record>
+        
+        <!-- Menu Invoicing -> Sales -> Documents -> Customer Credit Notes -->
+        <record model="ir.ui.menu" id="account.menu_action_invoice_out_refund">
+            <field name="groups_id" eval="[(6,0,[ref('make_menu_invisible')])]"/>
+        </record>
+        
+        <!-- Menu Invoicing -> Sales -> Master Data -> Sellable Products -->
+        <record model="ir.ui.menu" id="account.product_product_menu_sellable">
+            <field name="groups_id" eval="[(6,0,[ref('make_menu_invisible')])]"/>
+        </record>
+        
+        <!-- Menu Invoicing -> Purchase -> Documents -> Vendor Credit Notes -->
+        <record model="ir.ui.menu" id="account.menu_action_invoice_in_refund">
+            <field name="groups_id" eval="[(6,0,[ref('make_menu_invisible')])]"/>
+        </record>
+        
+        <!-- Menu Invoicing -> Purchase -> Master Data -> Purchasable Products -->
+        <record model="ir.ui.menu" id="account.product_product_menu_purchasable">
+            <field name="groups_id" eval="[(6,0,[ref('make_menu_invisible')])]"/>
+        </record>
+        
+        
+        <!-- Menu Invoicing -> Reporting -> Management -->
+        <record model="ir.ui.menu" id="account.account_reports_management_menu">
+            <field name="groups_id" eval="[(6,0,[ref('make_menu_invisible')])]"/>
+        </record>
+        
+        
+        <!-- Menu Invoicing -> Reporting -> PDF Reports -> Journal Audit -->
+        <!-- <record model="ir.ui.menu" id="account.menu_print_journal">
+            <field name="groups_id" eval="[(6,0,[ref('make_menu_invisible')])]"/>
+        </record> -->
+        
+        <!-- Menu Invoicing -> Reporting -> PDF Reports -> Tax Report -->
+        <!-- <record model="ir.ui.menu" id="account.menu_account_report">
+            <field name="groups_id" eval="[(6,0,[ref('make_menu_invisible')])]"/>
+        </record> -->
+        
+        <!-- Menu Invoicing -> Configuration -->
+        <record model="ir.ui.menu" id="account.menu_finance_configuration">
+            <field name="groups_id" eval="[(6,0,[ref('make_menu_invisible')])]"/>
+        </record>
+
+    </data>
+</odoo>
