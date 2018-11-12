@@ -1,0 +1,24 @@
+<odoo>
+    <data>
+        <record id="distrib_product_uom_form_view" model="ir.ui.view">
+            <field name="name">product.uom.form</field>
+            <field name="model">product.uom</field>
+            <field name="inherit_id" ref="product.product_uom_form_view"/>
+            <field name="priority" eval="20" />
+            <field name="arch" type="xml">
+                <field name="uom_type" position="attributes">
+                    <attribute name="invisible" >1</attribute>
+                </field>
+                <field name="active" position="attributes">
+                    <attribute name="invisible" >1</attribute>
+                </field>
+                <field name="rounding" position="attributes">
+                    <attribute name="invisible" >1</attribute>
+                </field>
+                <field name="category_id" position="attributes">
+                    <attribute name="options" >{'no_edit': True,'no_create': True,'no_create_edit': True,'no_open': True}</attribute>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

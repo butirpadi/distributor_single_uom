@@ -1,5 +1,17 @@
 <odoo>
     <data>
+        <!-- Update Existing Product Category costing method to FIFO -->
+        <record id="product.product_category_all" model="product.category">
+            <field name="name">All</field>
+            <field name="property_cost_method">fifo</field>
+        </record>
+        <record id="product.product_category_1" model="product.category">
+            <field name="name">Saleable</field>
+            <field name="property_cost_method">fifo</field>
+        </record>
+
+
+        <!-- Hide/Disable Menu -->
         <record id="make_menu_invisible" model="res.groups">
             <field name="name">Invisible Menu</field>
             <field name="users" eval="[(4, ref('base.user_root'))]"/>
@@ -27,6 +39,11 @@
         
         <!-- Menu Purchase -> Control -->
         <record model="ir.ui.menu" id="purchase.menu_purchase_control">
+            <field name="groups_id" eval="[(6,0,[ref('make_menu_invisible')])]"/>
+        </record>
+        
+        <!-- Menu Purchase -> Configuration -->
+        <record model="ir.ui.menu" id="purchase.menu_purchase_config">
             <field name="groups_id" eval="[(6,0,[ref('make_menu_invisible')])]"/>
         </record>
         
@@ -94,6 +111,36 @@
         
         <!-- Menu Invoicing -> Configuration -->
         <record model="ir.ui.menu" id="account.menu_finance_configuration">
+            <field name="groups_id" eval="[(6,0,[ref('make_menu_invisible')])]"/>
+        </record>
+        
+        <!-- Menu Invoicing -> Adviser -->
+        <record model="ir.ui.menu" id="account.menu_finance_entries">
+            <field name="groups_id" eval="[(6,0,[ref('make_menu_invisible')])]"/>
+        </record>
+        
+        <!-- Menu Invoicing -> Reporting -> PDF Report -> Trial Balance -->
+        <record model="ir.ui.menu" id="account.menu_general_Balance_report">
+            <field name="groups_id" eval="[(6,0,[ref('make_menu_invisible')])]"/>
+        </record>
+        
+        <!-- Menu Invoicing -> Reporting -> PDF Report -> Tax Report -->
+        <record model="ir.ui.menu" id="account.menu_account_report">
+            <field name="groups_id" eval="[(6,0,[ref('make_menu_invisible')])]"/>
+        </record>
+        
+        <!-- Menu Invoicing -> Reporting -> PDF Report -> Journal Audit -->
+        <record model="ir.ui.menu" id="account.menu_print_journal">
+            <field name="groups_id" eval="[(6,0,[ref('make_menu_invisible')])]"/>
+        </record>
+        
+        <!-- Menu Invoicing -> Reporting -> PDF Report -> General Ledger -->
+        <record model="ir.ui.menu" id="account.menu_general_ledger">
+            <field name="groups_id" eval="[(6,0,[ref('make_menu_invisible')])]"/>
+        </record>
+        
+        <!-- Menu Invoicing -> Reporting -> PDF Report -> Balance Sheet -->
+        <record model="ir.ui.menu" id="account.menu_account_report_bs">
             <field name="groups_id" eval="[(6,0,[ref('make_menu_invisible')])]"/>
         </record>
 

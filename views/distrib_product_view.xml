@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+        <record id="distrib_product_category_form_view" model="ir.ui.view">
+            <field name="name">distrib.product.category.form</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="product.product_category_form_view"/>
+            <field name="priority" eval="20" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='removal_strategy_id']/parent::group" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <group name="account_property" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </group>
+                <field name="property_cost_method" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </field>
+                <field name="property_valuation" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </field>
+                <field name="parent_id" position="attributes">
+                    <attribute name="options" >{'no_edit': True,'no_create': True,'no_create_edit': True,'no_open': True}</attribute>
+                </field>
+            </field>
+        </record>
+
+        <record id="product.product_category_action_form" model="ir.actions.act_window">
+            <field name="name">Product Categories</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.category</field>
+            <field name="view_type">form</field>
+            <field name="search_view_id" ref="product.product_category_search_view"/>
+            <field name="view_id" ref="product.product_category_list_view"/>
+            <field name="context">{"default_parent_id":1,"default_property_cost_method": 'fifo', "default_property_valuation": 'manual_periodic'}</field>
+        </record>
+    </data>
+</odoo>

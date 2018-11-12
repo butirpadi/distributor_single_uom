@@ -1,0 +1,33 @@
+<odoo>
+    <data>
+        <record id="distrib_purchase_order_form" model="ir.ui.view">
+            <field name="name">distrib.urchase.order.form</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="priority" eval="20" />
+            <field name="arch" type="xml">
+                <field name="amount_tax" position="attributes">
+                    <attribute name="invisible" >1</attribute>
+                </field>
+                <field name="amount_untaxed" position="attributes">
+                    <attribute name="invisible" >1</attribute>
+                </field>
+                <field name="taxes_id" position="attributes">
+                    <attribute name="invisible" >1</attribute>
+                </field>
+                <field name="qty_received" position="attributes">
+                    <attribute name="invisible" >1</attribute>
+                </field>
+                <field name="qty_invoiced" position="attributes">
+                    <attribute name="invisible" >1</attribute>
+                </field>
+                <xpath expr="//field[@name='order_line']/tree/field[@name='date_planned']" position="attributes">
+                    <attribute name="invisible" >1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='picking_type_id']/parent::group/parent::group/parent::page" position="attributes">
+                    <attribute name="invisible" >1</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

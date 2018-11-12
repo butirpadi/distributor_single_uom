@@ -8,10 +8,10 @@
 
     'description': """
         Aplikasi Distributor dengan Single UOM
-        <br/>Purchase
-        <br/>Sale
-        <br/>Inventory
-        <br/>Account
+        Purchase
+        Sale
+        Inventory
+        Account
     """,
 
     'author': "Tepat Guna Karya",
@@ -30,8 +30,13 @@
     'data': [
         # 'security/ir.model.access.csv',
         'data/group_invisible_menu.xml',
+        'views/distrib_product_template_view.xml',
+        'views/distrib_product_view.xml',
+        'views/distrib_purchase_views.xml',
+        'views/distrib_view_partner_form.xml',
+        'views/distrib_sale_views.xml',
+        'views/distrib_product_uom_views.xml',
         'views/menu.xml',
-        # 'views/views.xml',
         # 'views/templates.xml',
     ],
     # only loaded in demonstration mode
