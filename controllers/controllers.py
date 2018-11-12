@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo import http
+from flectra import http
 
 # class DistributorSingleUom(http.Controller):
 #     @http.route('/distributor_single_uom/distributor_single_uom/', auth='public')
@@ -17,4 +17,4 @@ from odoo import http
 #     def object(self, obj, **kw):
 #         return http.request.render('distributor_single_uom.object', {
 #             'object': obj
-#         })
+#         }) 

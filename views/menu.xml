@@ -1,8 +1,8 @@
-<odoo>
+<flectra>
     <data>
         <menuitem id="distrib_menu_stock_uom_form_action" action="product.product_uom_form_action"
         name="Unit of Measure" parent="stock.menu_stock_inventory_control" sequence="3"/>
         <menuitem id="menu_product_varian_config_distributor" name="Product Categories" action="product.product_category_action_form"
         parent="stock.menu_stock_inventory_control" sequence="4"/>
     </data>
-</odoo>
+</flectra>
