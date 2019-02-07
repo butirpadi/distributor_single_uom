@@ -1,4 +1,4 @@
-<flectra>
+<odoo>
     <data>
         <!-- Update Existing Product Category costing method to FIFO -->
         <record id="product.product_category_all" model="product.category">
@@ -145,4 +145,4 @@
         </record>
 
     </data>
-</flectra>
+</odoo>

@@ -1,4 +1,4 @@
-<flectra>
+<odoo>
     <data>
         <record id="distrib_product_category_form_view" model="ir.ui.view">
             <field name="name">distrib.product.category.form</field>
@@ -34,4 +34,4 @@
             <field name="context">{"default_parent_id":1,"default_property_cost_method": 'fifo', "default_property_valuation": 'manual_periodic'}</field>
         </record>
     </data>
-</flectra>
+</odoo>

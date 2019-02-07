@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from flectra import models, fields, api
+from odoo import models, fields, api
 
 # class distributor_single_uom(models.Model):
 #     _name = 'distributor_single_uom.distributor_single_uom'
